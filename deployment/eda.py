@@ -43,7 +43,7 @@ To achieve this goal, I will take the following steps:
 - Finally, I will use the trained model to forecast Iekly sales for the next month based on the most recent sales data available.    
     '''
     )
-    
+
     # Membuat garis lurus
     st.markdown('-'*42)
 
@@ -68,6 +68,9 @@ To achieve this goal, I will take the following steps:
 
 
     st.write('## Product Performance')
+    st.write("""
+    **This is the proportion of each category**
+    """)
     # create new df grouped by product
     df_product = df.groupby(['product_item']).agg(
         total_quantity=('quantity', 'sum'),
@@ -87,17 +90,10 @@ To achieve this goal, I will take the following steps:
     **I use 3,000 as baseline from the average quantity sold**
     """)
 
-    st.write('## Product Category Proportion')
-    # calculate percentage of each category
-    df_product['percentage'] = df_product['total_quantity'] / df_product['total_quantity'].sum() * 100
-
-    # create donut plot
-    fig = px.pie(df_product, values='percentage', names='category', hole=.5, color_discrete_sequence=px.colors.qualitative.Pastel)
-
-    # display plot in Streamlit
-    st.plotly_chart(fig)
-
-    st.write('## Product CategoryPerformance')
+    st.write('## Product Category Performance')
+    st.write("""
+    **This is the performance of total product sold in each category**
+    """)
     # Create bar plot
     fig, ax = plt.subplots(figsize=(12, 6))
     sns.barplot(data=df_product, x='category', y='total_quantity', ax=ax, errorbar=None)
@@ -114,9 +110,6 @@ To achieve this goal, I will take the following steps:
     ax.set_xlabel('Category', fontsize=14)
     ax.set_ylabel('Total Quantity', fontsize=14)
     ax.set_title('Product Sales by Category', fontsize=16)
-
-    # Display plot in Streamlit
-    st.pyplot(fig)
 
 
 
