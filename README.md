@@ -9,3 +9,6 @@ To achieve this goal, I will take the following steps:
 - Finally, I will use the trained model to forecast Iekly sales for the next month based on the most recent sales data available. 
 
 As a highly enthusiastic and goal-oriented Data Scientist with over 3 years of experience working as a project manager in diverse domains of expertise, I am confident in my ability to bring a unique combination of technical expertise and analytical skills to the table. My previous experiences have equipped me with the ability to utilize data to drive solutions and my commitment to continuous learning and growth has honed my strong organizational abilities, teamwork orientation, and exceptional problem-solving skills. With a data-driven approach and a determined mindset, I am eager to leverage my analytical mindset and technical knowledge to make a significant impact as a Data Analyst/Data Scientist. I am confident that I will excel in this field and tackle any challenges that arise while remaining focused on achieving my goals.
+
+### To Check Deployment Please Visit: https://huggingface.co/spaces/zakish/paragon-forecast
+
